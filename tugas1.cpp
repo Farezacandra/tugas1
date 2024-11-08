@@ -2,7 +2,6 @@
 using namespace std;
 
 int main() {
-    char tpRmh, jnsPembayaran;
     char namaPembeli[30];
     long long hrgRmh, angsuran;
     long long total = 0;
@@ -17,7 +16,7 @@ int main() {
     switch (tpRmh) {
         case 'a':
         case 'A':
-            if (jnsPembayaran == 'K' || jnsPembayaran == 'k') {
+            if (jnsPembayaran == 'K') {
                 hrgRmh = 50000000;
                 angsuran = 500000;
                 total = hrgRmh * 12 * 10;
@@ -27,7 +26,7 @@ int main() {
             break;
         case 'b':
         case 'B':
-            if (jnsPembayaran == 'K' || jnsPembayaran == 'k') {
+            if (jnsPembayaran == 'K') {
                 hrgRmh = 75000000;
                 angsuran = 750000;
                 total = hrgRmh * 12 * 10;
@@ -37,7 +36,7 @@ int main() {
             break;
         case 'c':
         case 'C':
-            if (jnsPembayaran == 'K' || jnsPembayaran == 'k') {
+            if (jnsPembayaran == 'K') {
                 hrgRmh = 85000000;
                 angsuran = 1000000;
                 total = hrgRmh * 12 * 10;
@@ -47,18 +46,13 @@ int main() {
             break;
         case 'd':
         case 'D':
-            if (jnsPembayaran == 'K' || jnsPembayaran == 'k') {
+            if (jnsPembayaran == 'K') {
                 hrgRmh = 1000000;
                 angsuran = 1000000;
                 total = hrgRmh * 12 * 10;
             } else {
                 hrgRmh = 1000000;
             }
-            break;
-        default:
-            cout << "Salah, Ulangi Lagi!" << endl;
-            return 0;
-    }
 
     if (jnsPembayaran == 'K' || jnsPembayaran == 'k') {
         cout << "Angsuran Perbulan: Rp " << angsuran << endl;
